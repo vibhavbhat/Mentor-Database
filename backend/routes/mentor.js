@@ -3,6 +3,9 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Mentor = require('../models/Mentor.js');
 
+
+
+
 /* GET ALL MENTORS */
 router.get('/', function(req, res, next) {
   Mentor.find(function (err, products) {
@@ -20,9 +23,9 @@ router.get('/:id', function(req, res, next) {
 });
 
 /* SAVE MENTOR */
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res) {
   Mentor.create(req.body, function (err, post) {
-    if (err) return next(err);
+    if (err) return err;
     res.json(post);
   });
 });
@@ -42,5 +45,9 @@ router.delete('/:id', function(req, res, next) {
     res.json(post);
   });
 });
+
+router.get('/', (req, res) => {
+  console.log("reached the /");
+})
 
 module.exports = router;

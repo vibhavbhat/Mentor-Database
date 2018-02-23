@@ -27,6 +27,7 @@ class Create extends Component {
 
     axios.post('/api/mentor', { name, skills, organization, linkedin })
       .then((result) => {
+        console.log(result);
         this.props.history.push("/")
       });
   }
