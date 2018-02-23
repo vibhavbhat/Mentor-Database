@@ -20,7 +20,7 @@
     "concurrently": "^3.5.0"
   },
   "scripts": {
-    "start": "node ./src/routes/mentor.js",
+    "start": "node ./backend/routes/mentor.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
