@@ -7,4 +7,4 @@ var MentorSchema = new mongoose.Schema({
   linkedin: String,
 });
 
-module.exports = mongoose.model('Mentor', MentorSchema);
+module.exports = mongoose.model('mentor', MentorSchema);
