@@ -1,10 +1,23 @@
 var mongoose = require('mongoose');
 
-var MentorSchema = new mongoose.Schema({
-  name: String,
-  skills: String,
-  organization: String,
-  linkedin: String,
-});
+var mentorSchema = new mongoose.Schema({
+  name: {
+    type: String, 
+    required: true
+  }, 
+  skill: {
+    type: String, 
+    required: true
+  }, 
+  organization: {
+    type: String,
+    required: true 
+  }, 
+  linkedin: {
+    type: String,
+    required: true 
+  },
+}
+);
 
-module.exports = mongoose.model('mentor', MentorSchema);
+module.exports = mongoose.model('mentors', mentorSchema);

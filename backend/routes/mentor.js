@@ -4,8 +4,6 @@ var mongoose = require('mongoose');
 var Mentor = require('../models/Mentor.js');
 
 
-
-
 /* GET ALL MENTORS */
 router.get('/', function(req, res, next) {
   Mentor.find(function (err, products) {
