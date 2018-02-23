@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 import Routes from "./containers/Routes";
@@ -21,10 +21,10 @@ class App extends Component {
 
   render() {
       return (
-        <div class="container">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+        <div classname="container">
+          <div classname="panel panel-default">
+            <div classname="panel-heading">
+              <h3 classname="panel-title">
                 MENTOR DATABASE
               </h3>
             </div>
