@@ -21,9 +21,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', api);
 
 // Render React page
-// app.get('/*', (request, response) => {
-//   response.sendFile(__dirname + '/public/index.html'); // For React/Redux
-// });
+app.get('/*', (request, response) => {
+  response.sendFile(__dirname + '/public/index.html'); // For React/Redux
+});
 
 app.listen(PORT, error => {
   error
