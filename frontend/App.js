@@ -29,7 +29,7 @@ class App extends Component {
               </h3>
             </div>
             <div class="panel-body">
-              <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Mentor</Link></h4>
+              <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Mentor</Link></h4>
               <table class="table table-stripe">
                 <thead>
                   <tr>
