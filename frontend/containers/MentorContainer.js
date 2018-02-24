@@ -2,22 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 import Routes from "./containers/Routes";
-import RouteNavItem from "./components/RouteNavItem";
-import "./App.css";
 
-class App extends Component {
+class MentorContainer extends Component {
   constructor(props) {
       super(props);
       this.state = {
             mentors: []
           };
   }
-
-  // componentDidMount() {
-  //     fetch('https://she17er.herokuapp.com/api/users/getUsers').then(results => {return results.json();}).then(data => {this.setState({login: data.login});});
-  //   }
-
-
 
   render() {
       return (
@@ -53,7 +45,7 @@ class App extends Component {
           </div>
         </div>
       );
-    }
+  }
 }
 
 export default App;
