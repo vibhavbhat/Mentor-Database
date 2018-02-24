@@ -4,9 +4,13 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
     "express": "^4.16.2",
+    "express-validator": "^5.0.1",
     "form-urlencoded-post": "^1.0.1",
     "mongoose": "^5.0.7",
+    "path": "^0.12.7",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
@@ -18,7 +22,7 @@
     "concurrently": "^3.5.0"
   },
   "scripts": {
-    "start": "node ./src/routes/mentor.js",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
