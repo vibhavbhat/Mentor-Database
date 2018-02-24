@@ -11,8 +11,8 @@ const api = require('./backend/routes');
 const db = 'mongodb://sxTalent:sxTalentDatabase@ds231228.mlab.com:31228/startup_exchange';
 
 // Connect to MongoDB
-mongoose.connect(db, { useMongoClient: true });
 mongoose.Promise = global.Promise;
+mongoose.connect(db);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -21,9 +21,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', api);
 
 // Render React page
-app.get('/*', (request, response) => {
-  response.sendFile(__dirname + '/public/index.html'); // For React/Redux
-});
+// app.get('/*', (request, response) => {
+//   response.sendFile(__dirname + '/public/index.html'); // For React/Redux
+// });
 
 app.listen(PORT, error => {
   error

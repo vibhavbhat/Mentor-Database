@@ -21,10 +21,10 @@ router.get('/:id', function(req, res, next) {
 });
 
 /* SAVE MENTOR */
-router.post('/', function(req, res) {
-  Mentor.create(req.body, function (err, post) {
+router.post('/', (req, res) => {
+  Mentor.create(req.body,  (err, user) => {
     if (err) return err;
-    res.json(post);
+    res.json(user);
   });
 });
 
@@ -43,9 +43,5 @@ router.delete('/:id', function(req, res, next) {
     res.json(post);
   });
 });
-
-router.get('/', (req, res) => {
-  console.log("reached the /");
-})
 
 module.exports = router;

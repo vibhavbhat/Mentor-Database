@@ -1,11 +1,12 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var mentorSchema = new mongoose.Schema({
+var mentorSchema = new Schema({
   name: {
     type: String, 
     required: true
   }, 
-  skill: {
+  skills: {
     type: String, 
     required: true
   }, 
@@ -17,7 +18,6 @@ var mentorSchema = new mongoose.Schema({
     type: String,
     required: true 
   },
-}
-);
+}, { timestamps: true });
 
 module.exports = mongoose.model('mentors', mentorSchema);

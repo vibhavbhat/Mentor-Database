@@ -7,9 +7,8 @@ const { check, oneOf, validationResult } = require('express-validator/check');
 //Local Imports
 const Mentor = require('./mentor');
 // const db = process.env.MONGOLAB_URI;
-const db = 'mongodb://she17ers:she17ers@ds131258.mlab.com:31258/she17erdb';
+const db = 'mongodb://sxTalent:sxTalentDB@ds231228.mlab.com:31228/startup_exchange';
 
-// const admin = require('./admin');
 mongoose.Promise = global.Promise;
 mongoose.connect(db);
 console.log(db);
@@ -26,6 +25,6 @@ router.route('/')
         console.log("reached the '/' ");
     })
 
-router.use('/mentor', User);
+router.use('/mentor', Mentor);
 
 module.exports = router;
