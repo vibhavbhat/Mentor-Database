@@ -7,12 +7,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MentorContainer from './MentorContainer';
 //import registerServiceWorker from './registerServiceWorker';
 
+class AppContainer extends Component {
     render() {
-       return(
-          <Router>
-              <div>
-                <Route exact path='/' component={MentorContainer} />
-              </div>
-          </Router>
-       );
-    }
+        console.log("it arrives at AppContainer");
+        return(
+           <Router>
+               <div>
+                 <Route exact path='/' component={MentorContainer} />
+               </div>
+           </Router>
+        );
+     }
+}
+    

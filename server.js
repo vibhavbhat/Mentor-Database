@@ -19,9 +19,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route API Calls to seperate router
 app.use('/api', api);
-
+console.log("at top level server.js");
 // Render React page
 app.get('/*', (request, response) => {
+  console.log("at server.js");
   response.sendFile(__dirname + '/public/index.html'); // For React/Redux
 });
 
