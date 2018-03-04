@@ -19,13 +19,13 @@ class Edit extends Component {
       });
   }
 
-  onChange = (e) => {
+  onChange(e) {
     const state = this.state.mentor
     state[e.target.name] = e.target.value;
     this.setState({mentor:state});
   }
 
-  onSubmit = (e) => {
+  onSubmit(e) {
     e.preventDefault();
 
     const { name, skills, organization, linkedin } = this.state.mentor;

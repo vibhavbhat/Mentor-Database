@@ -48,13 +48,13 @@ export default class Signup extends Component {
     return this.state.email.length > 0 && this.validatePassWord() && this.state.phone.length > 0 && this.state.age.length > 0 && this.state.gender.length > 0 && this.state.role.length > 0;
   }
 
-  handleChange = event => {
+  handleChange(event) {
     this.setState({
       [event.target.id]: event.target.value
     });
   }
 
-  handleSubmit = event => {
+  handleSubmit(event) {
       if (this.validateForm()) {
           this.setState({login: true});
           this.GenerateNewUser();
