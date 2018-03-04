@@ -19,6 +19,7 @@ class MentorContainer extends Component {
   
   render() {
       return (
+        <div>
         <Router>
             <div>
               <Route path='/edit/:id' component={Edit} />
@@ -56,6 +57,7 @@ class MentorContainer extends Component {
               </table>
             </div>
           </div>
+        </div>
         </div>
       );
   }
