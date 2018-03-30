@@ -14,5 +14,6 @@ const store = configureStore(history);
 
 ReactDOM.render(
   console.log("inside render method " + AppContainer),
-  <AppContainer/>
+  <AppContainer/>,
+  document.getElementById('root')
 );

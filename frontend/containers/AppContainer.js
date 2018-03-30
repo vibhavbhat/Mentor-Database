@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +8,11 @@ import MentorContainer from './MentorContainer';
 //import registerServiceWorker from './registerServiceWorker';
 
 console.log("reached before AppContainer ");
-class AppContainer extends React.Component {
+class AppContainer extends Component {
+    constructor(props) {
+        super(props);
+        console.log("does this arrive here?")
+    }
     render() {
         console.log("it arrives at AppContainer");
         return(
@@ -22,4 +26,6 @@ class AppContainer extends React.Component {
 }
 
 export default AppContainer;
+
+
     

@@ -9,12 +9,12 @@ import AppContainer from './AppContainer.js';
 export default function Root({ store, history }) {
   return (
     <Provider store={store}>
-      <ConnectedRouter history={history}>
+      {/* <ConnectedRouter history={history}> */}
         <div>
           <AppContainer />
           {/* //<DevTools /> */}
         </div>
-      </ConnectedRouter>
+      {/* </ConnectedRouter> */}
     </Provider>
   );
 }
