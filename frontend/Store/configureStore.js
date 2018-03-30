@@ -1,13 +1,24 @@
+// NPM Imports
 import { createStore, compose, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk'
-import rootReducer from '../reducers';
+import createHistory from 'history/createBrowserHistory';
+import { routerMiddleware } from 'react-router-redux';
+import thunk from 'redux-thunk';
 
-export function configureStore(initialState) {
-    return createStore(
-        rootReducer,
-        Object.assign({}, initialState, defaultState),
-        compose(
-            applyMiddleware(thunkMiddleware),
-        ),
-    );
+// Local Imports & Constants
+//import DevTools from '../containers/DevTools';
+import rootReducer from '../Reducers/index';
+import { loadState } from './sessionStorage';
+const persistedState = loadState();
+
+export function configureStore(history) {
+  const middleware = [thunk, routerMiddleware(history)];
+  return createStore(
+    rootReducer,
+    persistedState,
+    compose(
+      applyMiddleware(...middleware),
+    )
+  );
 }
+
+export const history = createHistory();
