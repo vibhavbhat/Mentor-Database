@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MentorContainer from './MentorContainer';
 //import registerServiceWorker from './registerServiceWorker';
 
-class AppContainer extends Component {
+class AppContainer extends React.Component {
     render() {
         console.log("it arrives at AppContainer");
         return(
