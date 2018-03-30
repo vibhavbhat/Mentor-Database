@@ -1,11 +1,9 @@
-// NPM Imports
 import { createStore, compose, applyMiddleware } from 'redux';
 import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 
 // Local Imports & Constants
-//import DevTools from '../containers/DevTools';
 import rootReducer from '../Reducers/index';
 import { loadState } from './sessionStorage';
 const persistedState = loadState();
@@ -15,10 +13,8 @@ export function configureStore(history) {
   return createStore(
     rootReducer,
     persistedState,
-    compose(
-      applyMiddleware(...middleware),
-    )
+    compose(applyMiddleware(...middleware))
   );
 }
 
-export const history = createHistory();
+// export const history = createHistory();
