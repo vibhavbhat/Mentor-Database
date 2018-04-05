@@ -13,6 +13,7 @@ class Create extends Component {
       organization: '',
       linkedin: ''
     };
+    console.log("reaches Create");
   }
   onChange(e) {
     const state = this.state

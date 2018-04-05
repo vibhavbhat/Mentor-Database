@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, Router, Route } from 'react-router-dom';
 import Routes from "./Routes";
 import Edit from './Edit';
 import Create from './Create';
@@ -21,13 +21,13 @@ class MentorContainer extends Component {
   render() {
       return (
         <div>
-        <Router>
+        <Switch>
             <div>
               <Route path='/edit/:id' component={Edit} />
               <Route path='/create' component={Create} />
               <Route path='/show/:id' component={Show} />
             </div>
-        </Router>
+        </Switch>
         <div className="container">
           <div className="panel panel-default">
             <div className="panel-heading">
