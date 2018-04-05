@@ -15,7 +15,12 @@ class Create extends Component {
     };
     console.log("reaches Create");
   }
+
+  componentWillMount() {
+    this.onSubmit.bind(this);
+  }
   onChange(e) {
+    console.log(e.target.name + ":" + e.target.value)
     const state = this.state
     state[e.target.name] = e.target.value;
     this.setState(state);
@@ -48,20 +53,20 @@ class Create extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name:</label>
-                <textArea className="form-control" name="name" onChange={this.onChange} placeholder="Name" cols="50" rows="1">{name}</textArea>
+                <textArea className="form-control" name="name" onChange={this.onChange.bind(this)} placeholder="Name" cols="50" rows="1">{name}</textArea>
               </div>
               <div className="form-group">
                 <label htmlFor="skills">Skills:</label>
-                <textArea className="form-control" name="skills" onChange={this.onChange} placeholder="Skills" cols="50" rows="1">{skills}</textArea>
+                <textArea className="form-control" name="skills" onChange={this.onChange.bind(this)} placeholder="Skills" cols="50" rows="1">{skills}</textArea>
               </div>
               <div className="form-group">
                 <label htmlFor="company">Organization:</label>
-                <textArea className="form-control" name="organization" onChange={this.onChange} placeholder="Organization" cols="50" rows="1">{organization}</textArea>              </div>
+                <textArea className="form-control" name="organization" onChange={this.onChange.bind(this)} placeholder="Organization" cols="50" rows="1">{organization}</textArea>              </div>
               <div className="form-group">
                 <label htmlFor="linkedin">LinkedIn:</label>
-                <textArea className="form-control" name="linkedin" onChange={this.onChange} placeholder="LinkedIn" cols="50" rows="1">{linkedin}</textArea>
+                <textArea className="form-control" name="linkedin" onChange={this.onChange.bind(this)} placeholder="LinkedIn" cols="50" rows="1">{linkedin}</textArea>
               </div>
-              <button type="submit" className="btn btn-default">Submit</button>
+              <button type="submit" onClick={this.onSubmit.bind(this)} className="btn btn-default">Submit</button>
             </form>
           </div>
         </div>
