@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Routes from "./Routes";
 import Edit from './Edit';
 import Create from './Create';
@@ -13,7 +14,7 @@ class MentorContainer extends Component {
       this.state = {
             mentors: []
           };
-      console.log("check");
+      console.log("reaches Mentor Container");
   }
 
   
