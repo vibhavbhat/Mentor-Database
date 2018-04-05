@@ -9,20 +9,17 @@ import MentorContainer from './MentorContainer';
 
 console.log("reached before AppContainer ");
 class AppContainer extends Component {
-    constructor(props) {
-        super(props);
-        console.log("does this arrive here?")
-    }
     render() {
-        console.log("it arrives at AppContainer");
-        return(
-           <Router>
-               <div>
-                 <Route exact path='/' component={MentorContainer} />
-               </div>
-           </Router>
+        return (
+          <div>
+            <Router>
+                <div>
+                    <Route exact path='/' component={MentorContainer} />
+                </div>
+            </Router>
+          </div>
         );
-     }
+      }
 }
 
 export default AppContainer;

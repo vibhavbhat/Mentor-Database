@@ -17,4 +17,4 @@ export function configureStore(history) {
   );
 }
 
-// export const history = createHistory();
+export const history = createHistory();
