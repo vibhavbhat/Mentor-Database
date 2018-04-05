@@ -28,16 +28,16 @@ class MentorContainer extends Component {
               <Route path='/show/:id' component={Show} />
             </div>
         </Router>
-        <div classname="container">
-          <div classname="panel panel-default">
-            <div classname="panel-heading">
-              <h3 classname="panel-title">
+        <div className="container">
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h3 className="panel-title">
                 MENTOR DATABASE
               </h3>
             </div>
-            <div class="panel-body">
-              <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Mentor</Link></h4>
-              <table class="table table-stripe">
+            <div className="panel-body">
+              <h4><Link to="/create"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Mentor</Link></h4>
+              <table className="table table-stripe">
                 <thead>
                   <tr>
                     <th>Name</th>
